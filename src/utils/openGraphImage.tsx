@@ -73,22 +73,21 @@ declare module 'react' {
 
 export async function siteOpenGraph() {
 	const template = (
-		<div tw="flex h-full w-full flex-col justify-between bg-[#202124] pb-3 pt-6 text-neutral-50">
+		<div tw="flex h-full w-full flex-col justify-between bg-[#ffffff] pb-3 pt-6 text-neutral-500">
 			<div
-				tw="mx-auto flex w-[85%] grow flex-col bg-[#212223] px-5 py-2"
-				style={{ boxShadow: '0 0 20px 10px rgb(136, 136, 136, 0.35)' }}
+				tw="mx-auto flex w-[85%] grow flex-col bg-[#fafafa] px-5 py-2"
+				style={{ boxShadow: '0 0 20px 10px rgb(136, 136, 136, 0.15)' }}
 			>
 				<div tw="grow flex flex-col pl-4 mt-2">
-					<img src={logoImage} tw="h-20 w-18" />
-					<div tw="mt-2 grow flex flex-col items-center">
-						<p tw="text-9xl font-bold">{SiteTitle}</p>
-						<p tw="text-7xl text-neutral-500 font-bold">{SiteDescription}</p>
+					<img src={logoImage} tw="h-16 w-16" />
+					<div tw="mt-10 grow flex flex-col items-center">
+						<p tw="text-7xl text-neutral-700 font-bold">{SiteTitle}</p>
+						<p tw="text-5xl font-bold mt-28">{SiteDescription}</p>
 					</div>
 				</div>
 			</div>
 			<div tw="mt-5 flex flex-col items-center text-xl">
-				<div>{FooterDescription}</div>
-				<div tw="text-neutral-400">{`© ${new Date().getFullYear()} ${Site}`}</div>
+				<div tw="text-neutral-500">{`© ${new Date().getFullYear()} ${Site}`}</div>
 			</div>
 		</div>
 	);
