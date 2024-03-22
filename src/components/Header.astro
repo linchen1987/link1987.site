@@ -1,16 +1,13 @@
 ---
-import fs from 'node:fs/promises';
 import { Icon } from 'astro-icon/components';
 import Nav from './Nav.astro';
 import ThemeToggler from './ThemeToggler.astro';
-import { SiteTitle, SiteDescription, Socials, Hide } from '~/config';
+import { Socials, Hide } from '~/config';
 
 interface Props {
 	currentNav?: string;
 }
 const { currentNav } = Astro.props;
-
-const customLogo = (await fs.stat('./src/assets/logo.svg')).isFile();
 
 const socialConfig: Record<string, Record<string, string>> = {
 	bilibili: { icon: 'ri:bilibili-fill' },
@@ -74,24 +71,7 @@ for (const platform in Socials) {
 ---
 
 <header class="grid grid-cols-2 items-start justify-between lg:flex">
-	{
-		!Hide.includes('logo') ? (
-			<a
-				transition:persist
-				href="/"
-				aria-label="go to index"
-				class={customLogo ? '' : 'w-[4.5rem] text-4xl'}
-			>
-				{customLogo ? (
-					<Icon name="logo" class="size-16 fill-current" title="go to index" />
-				) : (
-					SiteTitle
-				)}
-			</a>
-		) : (
-			<div />
-		)
-	}
+	<div></div>
 	<button
 		transition:persist
 		id="menu-btn"
@@ -104,18 +84,11 @@ for (const platform in Socials) {
 		<Icon name="ri:menu-fill" class="size-8" />
 	</button>
 	<div id="menu" class="col-span-2 hidden flex-col gap-3 text-center lg:flex lg:items-end">
-		<div class="mb-[2dvh] flex flex-col items-center gap-3 lg:mb-7 lg:flex-row lg:gap-8">
+		<div class="mb-[2dvh] flex flex-col items-center gap-3 lg:mb-10 lg:flex-row lg:gap-8">
 			<Nav currentNav={currentNav} />
-			{
-				!Hide.includes('search') && (
-					<a href="/search" title="Navigate to search page" aria-label="Navigate to search page">
-						<Icon name="ri:search-2-line" class="opacity-75 hover:opacity-100" />
-					</a>
-				)
-			}
 			{!Hide.includes('themeToggler') && <ThemeToggler />}
 		</div>
-		<Fragment transition:persist>
+		<!-- <Fragment transition:persist>
 			{!Hide.includes('siteDescription') && <div>{SiteDescription}</div>}
 			{
 				socials.length > 0 && (
@@ -132,7 +105,7 @@ for (const platform in Socials) {
 					</div>
 				)
 			}
-		</Fragment>
+		</Fragment> -->
 	</div>
 </header>
 

@@ -1,8 +1,6 @@
 ---
-import { Picture } from 'astro:assets';
 import MarkdownLayout from '~/layouts/MarkdownLayout.astro';
 import { SiteTitle, SiteDescription } from '~/config';
-import img from '~/assets/undraw_dog_c7i6.svg';
 ---
 
 <MarkdownLayout
@@ -12,39 +10,44 @@ import img from '~/assets/undraw_dog_c7i6.svg';
 	currentNav="Home"
 >
 	<div class="flex flex-col items-center gap-4 xl:flex-row">
-		<Picture class="lg:max-w-md" src={img} formats={['avif', 'webp']} alt="a dog" loading="eager" />
-		<div>
-			<h1>Hello there! I am Ladit👋</h1>
+		<div class="m-auto lg:px-40">
+			<h1>Hello! I am Link1987👋</h1>
 			<p>
-				This is a blog template built with <a href="https://astro.build">Astro</a>. The theme
-				originates from <a href="https://github.com/varkai/hugo-theme-zozo">hugo-theme-zozo</a>.
-				Check out the docs on <a
-					href="https://github.com/ladit/astro-blog-zozo"
-					target="_blank"
-					rel="noopener">GitHub</a
-				> to get started. Here are some features:
+				我是一名程序员，主要使用 React 和 Nodejs 从事应用程序开发。
 			</p>
+			<h3>
+				从业经历
+			</h3>
 			<ul class="list-disc">
 				<li>
-					Fast and light weight. Lighthouse 4 * 100/100 on desktop. 1 point decreased on mobile.
+					10年以上编程经验
 				</li>
 				<li>
-					<a href="https://astro.build">Astro 4</a> with no other UI frameworks intergrated for better
-					performance
+					前 <a href="https://arcblock.io" target="_blank">Blocklet Platform</a> 核心开发成员
 				</li>
 				<li>
-					mobile-friendly responsive design with <a href="https://tailwindcss.com/">Tailwind CSS</a>
+					前 <a href="https://maicai.meituan.com/" target="_blank">美团买菜</a> 前端开发工程师
 				</li>
 				<li>
-					Light / dark theme derived from <a href="https://github.com/varkai/hugo-theme-zozo"
-						>hugo-theme-zozo</a
-					>
+					前 <a href="https://time.geekbang.org" target="_blank">极客时间</a> 核心开发成员
 				</li>
-				<li>Markdown post support with emoji shortcode, katex</li>
-				<li>static search with <a href="https://pagefind.app">Pagefind</a></li>
-				<li>comment system powered by <a href="https://github.com/giscus/giscus">giscus</a></li>
-				<li>SEO-friendly setup with canonical URLs and OpenGraph data</li>
-				<li>RSS / Sitemap.xml / dynamic open graph image generation</li>
+			</ul>
+			<h3>
+				社交媒体
+			</h3>
+			<ul class="list-disc">
+				<li>
+					<a href="https://x.com/linklin1987" target="_blank">Twitter</a>
+				</li>
+				<li>
+					<a href="https://github.com/linchen1987" target="_blank">Github</a>
+				</li>
+				<li>
+					<a href="https://juejin.cn/user/2119514147286750" target="_blank">掘金</a>
+				</li>
+				<li>
+					<a href="https://github.com/abt.link1987.cn" target="_blank">Blocklet Site</a>
+				</li>
 			</ul>
 		</div>
 	</div>

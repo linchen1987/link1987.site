@@ -11,8 +11,7 @@ import { Site, SiteTitle, SiteDescription, FooterDescription } from '~/config';
 // 	'data:image/svg+xml;base64,' +
 // 	(await fs.promises.readFile('src/assets/logo.svg')).toString('base64');
 const logoImage =
-	'data:image/png;base64,' +
-	(await fs.promises.readFile('src/assets/og-logo.png')).toString('base64');
+	'data:image/png;base64,' + (await fs.promises.readFile('src/assets/logo.png')).toString('base64');
 
 const font = async () => {
 	const fontPath = 'src/assets/LXGWWenKaiGBScreen.ttf';
