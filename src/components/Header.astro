@@ -1,13 +1,10 @@
 ---
-import { Icon } from 'astro-icon/components';
-import Nav from './Nav.astro';
 import ThemeToggler from './ThemeToggler.astro';
-import { Socials, Hide } from '~/config';
+import { Socials } from '~/config';
 
 interface Props {
 	currentNav?: string;
 }
-const { currentNav } = Astro.props;
 
 const socialConfig: Record<string, Record<string, string>> = {
 	bilibili: { icon: 'ri:bilibili-fill' },
